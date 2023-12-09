@@ -67,8 +67,7 @@ if [[ $8 == "true" ]]; then
     /root/.pyenv/shims/pip install pygame
 fi # [$8]
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-source "$HOME/.cargo/env"
+sudo apt-get install -y rustc
 
 if [ -f $6 ]; then
     /root/.pyenv/shims/pip install -r $6
