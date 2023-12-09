@@ -29,8 +29,10 @@ if [ -f $6 ]; then
     /root/.pyenv/shims/pip install -r $6
 fi # [ -f $6 ]
 
-apt-get install -y libgirepository1.0-dev build-essential libbz2-dev libreadline-dev libssl-dev zlib1g-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libcairo2-dev binutils
+apt-get update
 apt-get install -y python3-gi python3-gi-cairo gir1.2-gtk-3.0 gir1.2-webkit2-4.1 python3-wheel python3-dev
+apt-get install -y libgirepository1.0-dev build-essential libbz2-dev libreadline-dev libssl-dev zlib1g-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libcairo2-dev binutils
+
 /root/.pyenv/shims/pip install PyGObject
 
 /root/.pyenv/shims/pyinstaller --clean -y --dist ./dist/linux --workpath /tmp $SPEC_FILE
