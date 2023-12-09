@@ -68,6 +68,7 @@ if [[ $8 == "true" ]]; then
 fi # [$8]
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source "$HOME/.cargo/env"
 
 if [ -f $6 ]; then
     /root/.pyenv/shims/pip install -r $6
