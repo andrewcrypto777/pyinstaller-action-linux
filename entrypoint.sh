@@ -71,6 +71,8 @@ if [ -f $6 ]; then
     /root/.pyenv/shims/pip install -r $6
 fi # [ -f $6 ]
 
+sudo apt-get install -y python3-gi python3-gi-cairo gir1.2-gtk-3.0 gir1.2-webkit2-4.1 python3-wheel python3-dev
+/root/.pyenv/shims/pip install PyGObject
 
 /root/.pyenv/shims/pyinstaller --clean -y --dist ./dist/linux --workpath /tmp $SPEC_FILE
 
