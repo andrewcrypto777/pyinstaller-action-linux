@@ -30,9 +30,8 @@ if [ -f $6 ]; then
 fi # [ -f $6 ]
 
 apt-get update
-apt-get upgrade -y
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
-apt-get install -y libglib2.0-0
+apt-get install -y libglib2.0-0=2.72.4-0ubuntu2.2
 apt-get install -y python3-gi python3-gi-cairo gir1.2-gtk-3.0 gir1.2-webkit2-4.0 python3-wheel python3-dev
 apt-get install -y libgirepository1.0-dev build-essential libbz2-dev libreadline-dev libssl-dev zlib1g-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libcairo2-dev binutils
 
