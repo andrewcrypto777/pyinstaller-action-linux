@@ -23,7 +23,7 @@ SPEC_FILE=${4:-*.spec}
 
 cd $WORKDIR
 
-apt-get install -y build-essential libssl-dev libffi-dev python3-dev cargo pkg-config cargo rustc
+apt-get install -y build-essential pkg-config cargo rustc
 
 if [ -f $6 ]; then
     /root/.pyenv/shims/pip install -r $6
